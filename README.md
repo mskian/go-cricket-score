@@ -1,4 +1,6 @@
-# Live Cricket Score
+# Live Cricket Score  
+
+[![test](https://github.com/mskian/go-cricket-score/actions/workflows/test.yml/badge.svg)](https://github.com/mskian/go-cricket-score/actions/workflows/test.yml)  
 
 Get Live Cricket Score on your Terminal and CMD  
 
@@ -24,6 +26,20 @@ go run main.go
 ```sh
 make build
 ```
+
+## Packges Build for
+
+Linux, Apple, Windows and Android - `/makefile`  
+
+- Linux-386
+- Linux-arm-7
+- Linux-amd64
+- Linux-arm64
+- Andriod-arm64
+- windows-386
+- windows-amd64
+- darwin-amd64
+- darwin-arm64
 
 ## LICENSE
 
