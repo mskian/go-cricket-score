@@ -4,6 +4,8 @@
 
 Get Live Cricket Score on your Terminal and CMD  
 
+![go Cricket Score CLI](https://codeberg.org/mskian/go-cricket-score/raw/branch/main/media/go-cricket-cli.gif)  
+
 ## Usage
 
 - Download or clone the repo
