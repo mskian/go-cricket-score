@@ -10,13 +10,13 @@ Get Live Cricket Score on your Terminal and CMD
 
 ```sh
 https://github.com/mskian/go-cricket-score.git
-go-cricket-score
+cd go-cricket-score
 ```
 
 - Execute the Script
 
 ```sh
-go run main.go
+go run score.go
 ```
 
 ## Build Package
@@ -40,6 +40,10 @@ Linux, Apple, Windows and Android - `/makefile`
 - windows-amd64
 - darwin-amd64
 - darwin-arm64
+
+## API
+
+Live Cricket Score API Nodejs - <https://github.com/mskian/cricket-api-nodejs>
 
 ## LICENSE
 

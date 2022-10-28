@@ -18,4 +18,5 @@ jobs:
     - name: Test CLI
       run: |
         go version
-        go run main.go
+        go run score.go -h
+        go run score.go -l
