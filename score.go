@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"time"
 
@@ -57,7 +58,7 @@ func main() {
 	if args.Live == true {
 		resp, err := http.Get("https://cricket-api.vercel.app/live")
 		if err != nil {
-			print(err)
+			log.Fatal(err)
 		}
 
 		defer resp.Body.Close()
@@ -65,7 +66,7 @@ func main() {
 		var post PostResponse
 
 		if err := json.NewDecoder(resp.Body).Decode(&post); err != nil {
-			print(err)
+			log.Fatal(err)
 		}
 
 		s.Start()
@@ -88,14 +89,18 @@ func main() {
 		}
 	} else if args.Match != "" {
 		client := &http.Client{}
-		resp, err := http.NewRequest("GET", "https://cricket-api.vercel.app/score", nil)
+		resp, err := http.NewRequest(http.MethodGet, "https://cricket-api.vercel.app/score", nil)
+		if err != nil {
+			log.Fatal(err)
+		}
 		q := resp.URL.Query()
 		q.Add("url", args.Match)
 		resp.URL.RawQuery = q.Encode()
 
 		req, err := client.Do(resp)
 		if err != nil {
-			print(err)
+			fmt.Println("Errored when sending request to the server")
+			return
 		}
 
 		defer req.Body.Close()
@@ -103,7 +108,7 @@ func main() {
 		var post PostResponse
 
 		if err := json.NewDecoder(req.Body).Decode(&post); err != nil {
-			print(err)
+			log.Fatal(err)
 		}
 
 		s.Start()
