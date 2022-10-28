@@ -31,6 +31,8 @@ make build
 
 ## Packges Build for
 
+- Download the CLI - <https://codeberg.org/mskian/go-cricket-score>  
+
 Linux, Apple, Windows and Android - `/makefile`  
 
 - Linux-386
